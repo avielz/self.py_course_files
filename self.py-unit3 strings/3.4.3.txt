@@ -1,0 +1,13 @@
+Please enter a string: astronaut
+astrONAUT
+
+
+
+
+input_string  = input("Please enter a string: ")
+input_string_len = len(input_string)
+input_string_lower = input_string[:input_string_len//2].lower()
+input_string_upper = input_string[input_string_len//2:].upper()
+new_string = input_string_lower + input_string_upper
+print(new_string)
+

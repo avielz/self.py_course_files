@@ -1,0 +1,11 @@
+#3 pigs excesize
+
+digits = input("Enter three digits (each digit for one pig): ")
+int_digits = int(digits)
+sum_digits = (int_digits // 100) + (int_digits % 100 //10) + (int_digits % 100 % 10)
+print (sum_digits)
+print (sum_digits // 3)
+print (sum_digits % 3)
+print (sum_digits % 3 == 0)
+
+

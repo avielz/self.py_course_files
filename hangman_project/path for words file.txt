@@ -1,0 +1,4 @@
+FIXED_PATH = r"C:\Users\avielz\Downloads\hangman\hangman_project\words.txt"
+print(FIXED_PATH)
+
+C:\Users\avielz\Downloads\hangman\hangman_project\words.txt

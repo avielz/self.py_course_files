@@ -1,0 +1,23 @@
+#hangman code learning python
+
+HANGMAN_ASCII_ART = ("""Welcome to the game Hangman\n _    _
+| |  | |
+| |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __
+|  __  |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \'
+| |  | | (_| | | | | (_| | | | | | | (_| | | | |
+|_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                     __/ |
+                    |___/""")
+
+
+print(HANGMAN_ASCII_ART)
+
+
+#import random
+#print (random.randint(5,10))
+
+MAX_TRIES = 6
+print(MAX_TRIES)
+
+guessed_letter = input("Guess a letter: ")
+print(guessed_letter)

@@ -1,0 +1,11 @@
+>>> len(msg)
+6
+>>> msg[-1::]
+'y'
+>>> msg[::2]
+'szg'
+>>> msg[1] == msg[3] == msg[5]
+True
+
+012345
+syzygy

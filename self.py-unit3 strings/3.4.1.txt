@@ -1,0 +1,20 @@
+>>> 'e' not in word
+False
+>>> word.isspace()
+False
+>>> word.count('p')
+2
+>>> word.find('sh')
+5
+>>> word.endswith('e')
+False
+>>> len(word)
+9
+>>> word[-2::-4]
+ic
+>>> word.startswith('spa')
+True
+
+012345678
+spaceship
+pp

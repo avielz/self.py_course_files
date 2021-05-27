@@ -1,0 +1,15 @@
+
+
+Please enter a string: ddar astronaut. pldase, stop drasing md!
+dear astronaut. please, stop erasing me!
+
+x = txt.replace("one", "three", 2)
+
+
+input_string  = input("Please enter a string: ")
+first_chr = input_string[0]
+sliced_input_string = input_string[1:]
+new_string = input_string[0] + sliced_input_string.replace(first_chr, "e")
+print(new_string)
+
+

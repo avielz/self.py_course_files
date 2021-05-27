@@ -1,0 +1,76 @@
+אם אתם רוצים לסמן לפייתון להתייחס למחרוזת (במקרה זה נתיב הקובץ) בדיוק כפי שהיא, ללא המרה לתווים מיוחדים, תוכלו להשתמש בתחילית r ולכתוב אותה לפני המחרוזת.
+
+דוגמה לשימוש בתחילית r לצורך ייצוג הנתיב לקובץ כפי שהוא, ללא המרה לתווים מיוחדים:
+
+>>> input_file = open(r"c:\telephones.txt", "r")
+
+with open(file,mode) as input_file:
+    #do something with the file;
+כאשר כותבים קוד במבנה הזה, הקובץ יישאר פתוח עד לסיום ריצת הבלוק with, ולאחר מכן ייסגר באופן אוטומטי.
+
+כאמור, השימוש בהצהרה with מחליף את הצורך לסגור את הקובץ באמצעות הפונקציה ()close. לדוגמה, במקום לכתוב את קטע הקוד שכולל סגירה מפורשת של הקובץ:
+
+spells_input_file = open("c:\harry_potter\spells.txt", "r")
+# do something with the file spells_input_file.close()
+ניעזר בהצהרה with ונכתוב:
+
+with open("c:\harry_potter\spells.txt", "r") as spells_input_file:
+# do something with the file
+
+reading
+
+#whole file
+spells = spells_input_file.read()
+
+#line by line- more economical on resources
+for line in spells_input_file
+... print(line, end="")
+
+#list of lines
+>>> lines = spells_input_file.readlines()
+>>> lines
+['Avada Kedavra: Death\n', 'Aberto: Opens objects\n', 'Lumos: Creates light from the wand's tip\n', 'Obliviate: Erases memories']
+
+#working with files
+spells_input_file = open("c:\harry_potter\spells.txt", "r")
+for line in spells_input_file:
+    if "Death" not in line:
+        print(line)
+spells_input_file.close()
+
+	
+r+
+
+Opens a file for both reading and writing. The file pointer placed at the beginning of the file.
+
+a
+
+Opens a file for appending. The file pointer is at the end of the file if the file exists. That is, the file is in the append mode. If the file does not exist, it creates a new file for writing.
+
+ab
+
+Opens a file for appending in binary format. The file pointer is at the end of the file if the file exists. That is, the file is in the append mode. If the file does not exist, it creates a new file for writing.
+
+a+
+
+Opens a file for both appending and reading. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
+
+write to a file
+
+chat_input_file = open("chat.txt", "w")
+chat_input_file.write("Me: Why chat, when you can use an owl?")
+chat_input_file.close()
+
+
+work with txt file
+COMMA = ", "
+dates = ""
+books_input_file = open("harryPotterBooks.txt", "r")
+for row in books_input_file:
+    date = row.split(COMMA)[1]
+    dates += date
+books_input_file.close()
+
+dates_file = open("harryPotterDates.txt", "w")
+dates_file.write(dates)
+dates_file.close()

@@ -1,0 +1,60 @@
+
+new_dict = {}
+>>> type(new_dict)
+<class 'dict'>
+>>> new_dict
+{}
+
+or 
+
+new_dict2 = dict()
+>>> type(new_dict2)
+<class 'dict'>
+>>> new_dict2
+{}
+
+keyboard_shortcuts["Paste"]
+'Ctrl + V'
+
+dict[key] = value
+
+keyboard_shortcuts
+{'Copy': 'Ctrl + C', 'Paste': 'Ctrl + V', 'Undo': 'Ctrl + Z'} 
+>>> keyboard_shortcuts["Cut"] = "Ctrl + X"
+>>> keyboard_shortcuts
+{'Copy': 'Ctrl + C', 'Paste': 'Ctrl + V', 'Undo': 'Ctrl + Z', 'Cut': 'Ctrl + X'}
+
+keyboard_shortcuts
+{'Copy': 'Ctrl + C', 'Paste': 'Ctrl + V', 'Undo': 'Ctrl + Z', 'Cut': 'Ctrl + X'}
+>>> keyboard_shortcuts["Copy"] = "Ctrl + Insert"
+
+keyboard_info
+{'Are emoji included?': True, 'Language': 'Hebrew'}
+>>> keyboard_info.keys()
+dict_keys(['Are emoji included?', 'Language'])
+
+keyboard_info.values()
+dict_values([True, 'Hebrew'])
+
+for key in keyboard_info.keys():
+. . . print(key)
+. . .
+Are emoji included?
+Language
+
+>>> for value in keyboard_info.values():
+. . . print(value)
+. . .
+True
+Hebrew
+
+keyboard_info
+{'Are emoji included?': True, 'Language': 'Hebrew'}
+>>> keyboard_info.items()
+dict_items([('Are emoji included?', True), ('Language', 'Hebrew')])
+
+for info in keyboard_info.items():
+. . . print("%s -> %s" % info)
+. . .
+Are emoji included? -> True
+Language -> Hebrew

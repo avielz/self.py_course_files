@@ -1,0 +1,27 @@
+example of serialisation and de-serialisation
+
+dict object 
+
+
+serialisation
+
+cd_details = {"song": "I believe I can fly", "name": "Robert Kelly", "year": 1998}
+input_file = open("c:\myCD.txt", "w")
+for key, value in cd_details.items():
+    input_file.write("%s:%s\n" % (key, value))
+input_file.close()
+
+deserialisation
+
+f = open("c:\myCD.txt", "r")
+cd_data = f.read()
+cd_splitted_lines = cd_data.split("\n")
+cd_items = []
+for element in cd_splitted_lines:
+    cd_items.append(element.split(":"))
+my_cd_dict = {}
+for item in cd_items:
+    my_cd_dict[item[0]] = item[1]
+f.close()
+print(my_cd_dict)
+{'song': 'I believe I can fly', 'name': 'Robert Kelly', 'year': '1998'}
